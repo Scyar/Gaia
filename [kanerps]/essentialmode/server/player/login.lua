@@ -16,6 +16,7 @@ function LoadUser(identifier, source, new, licenseNotRequired)
 
 			TriggerClientEvent('es:setPlayerDecorator', Source, 'rank', Users[Source]:getPermissions())
 			TriggerClientEvent('es:setMoneyIcon', Source,settings.defaultSettings.moneyIcon)
+			TriggerClientEvent('es:activateMoney', Source,Users[Source]:getMoney())
 
 			for k,v in pairs(commandSuggestions) do
 				TriggerClientEvent('chat:addSuggestion', Source, settings.defaultSettings.commandDelimeter .. k, v.help, v.params)
