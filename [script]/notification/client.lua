@@ -1,0 +1,13 @@
+RegisterNetEvent('notification:notification')
+AddEventHandler('notification:notification', function(text)
+	SetNotificationTextEntry("STRING")
+	AddTextComponentString(text)
+	DrawNotification(false, false)
+end)
+
+RegisterNetEvent('notification:displayhelptext')
+AddEventHandler('notification:displayhelptext', function(str)
+	SetTextComponentFormat("STRING")
+	AddTextComponentString(str)
+	DisplayHelpTextFromStringLabel(0, 0, 1, -1)
+end)

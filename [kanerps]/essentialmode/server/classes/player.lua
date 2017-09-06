@@ -15,7 +15,7 @@ function CreatePlayer(source, permission_level, money, bank, identifier, license
 	self.group = group
 	self.coords = {x = 0.0, y = 0.0, z = 0.0}
 	self.session = {}
-	self.bankDisplayed = false
+	self.bankDisplayed = true
 	self.moneyDisplayed = false
 
 	local rTable = {}
@@ -110,7 +110,7 @@ function CreatePlayer(source, permission_level, money, bank, identifier, license
 			local newBank = self.bank + m
 			self.bank = newBank
 
-			TriggerClientEvent("es:addedBank", self.source, m)
+			--TriggerClientEvent("es:addedBank", self.source, m)
 		else
 			log('ERROR: There seems to be an issue while adding to bank, a different type then number was trying to be added.')
 			print('ERROR: There seems to be an issue while adding to bank, a different type then number was trying to be added.')
@@ -122,7 +122,7 @@ function CreatePlayer(source, permission_level, money, bank, identifier, license
 			local newBank = self.bank - m
 			self.bank = newBank
 
-			TriggerClientEvent("es:removedBank", self.source, m)
+			--TriggerClientEvent("es:removedBank", self.source, m)
 		else
 			log('ERROR: There seems to be an issue while removing from bank, a different type then number was trying to be removed.')
 			print('ERROR: There seems to be an issue while removing from bank, a different type then number was trying to be removed.')
